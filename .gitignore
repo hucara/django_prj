@@ -1,0 +1,4 @@
+django_env/
+fakenews/db.sqlite3
+__pycache__/
+*.pyc
