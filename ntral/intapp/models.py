@@ -15,7 +15,6 @@ class Report(models.Model):
     class Meta:
         abstract = True
 
-
 class ReportEntry(models.Model):
     _id = models.ObjectIdField()
     report = models.EmbeddedModelField(
