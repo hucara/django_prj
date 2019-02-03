@@ -1,15 +1,13 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import serializers, status, generics, viewsets
-from .models import Report, ReportEntry
+from rest_framework import serializers, status, viewsets
+from .models import ReportEntry
 from .serializers import ReportSerializer
 from .text_retrieval.search import SearchEngine
 
 from gensim.models.lsimodel import LsiModel
 from gensim.similarities import MatrixSimilarity
 from gensim.corpora import Dictionary
-
-from joblib import load
 
 
 class ReportViewSet(viewsets.ModelViewSet):
@@ -29,6 +27,7 @@ class ReportViewSet(viewsets.ModelViewSet):
         else:
             return serializer
 
+
 @api_view(['POST'])
 def search(request):
 
@@ -43,5 +42,7 @@ def search(request):
         model=lsi, index=index, dictionary=dictionary,
         file_path="./data/News_Category_Dataset_v2.json"
         )
-    result['doc'] = se.query(query=data[0]['query'], num_results=data[0]['return'])
+    result['doc'] = se.query(
+        query=data[0]['query'], num_results=data[0]['return']
+        )
     return Response(result)

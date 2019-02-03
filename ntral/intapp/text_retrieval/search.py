@@ -1,6 +1,7 @@
 import json
 import os
 
+
 class SearchEngine():
 
     def __init__(self, file_path, model, index, dictionary):
@@ -37,7 +38,7 @@ class SearchEngine():
                     (sim_val, line['headline'], line['short_description'])
                 )
 
-        result.sort(key=lambda tup:tup[0][1], reverse = True)
+        result.sort(key=lambda tup: tup[0][1], reverse=True)
         return result
 
     def query(self, query, num_results=1, return_id=False):

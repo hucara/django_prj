@@ -1,5 +1,7 @@
 # Semantic search test with gensim and LsiModel
 
+Small Django project with a semantic search engine via REST.
+
 This is only for testing. Expect to find crappy code.
 Dataset: https://www.kaggle.com/rmisra/news-category-dataset
 

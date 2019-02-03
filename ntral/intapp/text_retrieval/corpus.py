@@ -1,6 +1,6 @@
-import json
 from gensim.corpora import Dictionary
-from helpers import tokenize, iter_news
+from helpers import iter_news
+import gensim
 
 
 class CorpusBuilder():
@@ -22,5 +22,3 @@ class CorpusBuilder():
 
         if save:
             self.dictionary.save(dict_save_path)
-
-class CorpusHelper():
