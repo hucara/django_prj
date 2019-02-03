@@ -1,6 +1,6 @@
 from django.db import models
 from djongo import models
-
+import uuid
 
 # Create your models here.
 class Report(models.Model):
@@ -16,7 +16,9 @@ class Report(models.Model):
         abstract = True
 
 class ReportEntry(models.Model):
-    _id = models.ObjectIdField()
+    _id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True
+    )
     report = models.EmbeddedModelField(
         model_container=Report
     )

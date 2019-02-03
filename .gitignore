@@ -2,3 +2,6 @@ django_env/
 fakenews/db.sqlite3
 __pycache__/
 *.pyc
+ntral/data/*
+ntral/.ipynb_checkpoints
+ntral/notebooks/.ipynb_checkpoints
