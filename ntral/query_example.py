@@ -3,7 +3,7 @@ import sys
 
 def send():
 
-    reports = [{'query': 'illness', 'return': 10}]
+    search = [{'query': 'illness', 'return': 10}]
 
     headers = {
         'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ def send():
 
     r = requests.post(
         'http://127.0.0.1:8000/api/search/',
-        json=reports, headers=headers
+        json=search, headers=headers
     )
     sys.stdout.write(r.text)
 
