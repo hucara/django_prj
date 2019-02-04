@@ -7,7 +7,8 @@ Dataset: https://www.kaggle.com/rmisra/news-category-dataset
 
 1. Download and place the specified dataset in the ntral/data folder.
 2. Run notebooks/genism_semantic_search_lsi_tfidf.ipynb to create corpus, dictionary and indexes.
-3. Run the server and query the search engine like done in query_example.py.
+3. Put the models, indexes, etc created in the ntral/data folder.
+4. Run the server and query the search engine like done in query_example.py.
 
 ## Results:
 
