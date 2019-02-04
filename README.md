@@ -1,6 +1,6 @@
 # django_prj
 
-# fakenews
+## fakenews
 
 Small Django project with a fake news classifier via REST.
 Dataset: https://www.kaggle.com/c/fake-news/data
@@ -11,9 +11,9 @@ A test example project with django framework that includes:
 * A classifier of fake news documents based on the dataset in kaggle.
 
 
-# ntral
+## ntral
 
-## Semantic search test with gensim and LsiModel
+### Semantic search test with gensim and LsiModel
 
 Small Django project with a semantic search engine via REST.
 
