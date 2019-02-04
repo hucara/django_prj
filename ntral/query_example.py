@@ -3,7 +3,7 @@ import sys
 
 def send():
 
-    reports = [{'query': 'boat', 'return': 10}]
+    reports = [{'query': 'illness', 'return': 10}]
 
     headers = {
         'Content-Type': 'application/json',
