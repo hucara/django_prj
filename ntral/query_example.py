@@ -1,6 +1,7 @@
 import requests
 import sys
 
+
 def send():
 
     search = [{'query': 'illness', 'return': 10}]

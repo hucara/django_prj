@@ -6,6 +6,7 @@ import json
 def get_search_one_doc():
     return [{'query': 'illness', 'return': 1}]
 
+
 def get_search_many_docs():
     return [{'query': 'illness', 'return': 10}]
 
@@ -33,7 +34,6 @@ class TestReport(APITestCase):
         )
 
         self.assertEqual(len(response.data), 1)
-
 
     def test_search_many_docs(self):
         EXPECTED_CODE = 200
