@@ -37,7 +37,7 @@ def search(request):
     lsi = LsiModel.load('./data/lsi_news.model')
     index = MatrixSimilarity.load('./data/lsi_news.index')
     dictionary = Dictionary.load('./data/news.dict')
-
+    
     se = SearchEngine(
         model=lsi, index=index, dictionary=dictionary,
         file_path="./data/News_Category_Dataset_v2.json"
